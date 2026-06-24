@@ -1,0 +1,4 @@
+user=YOUR_DB_USER
+password=YOUR_DB_PASSWORD
+dburl=jdbc:mysql://localhost:3306/coursejdbc
+useSSL=false

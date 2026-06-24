@@ -117,7 +117,7 @@ public class SellerFormController implements Initializable {
 			Utils.currentStage(event).close();
 
 		} catch (ValidationException e) {
-			setErrorMessages(e.getErros());
+			setErrorMessages(e.getErrors());
 		} catch (DbException e) {
 			Alerts.showAlert("Erro save object", null, e.getMessage(), AlertType.ERROR);
 		}
@@ -162,7 +162,7 @@ public class SellerFormController implements Initializable {
 		
 		obj.setDepartment(comboBoxDepartment.getValue());
 
-		if (exception.getErros().size() > 0) {
+		if (exception.getErrors().size() > 0) {
 			throw exception;
 		}
 

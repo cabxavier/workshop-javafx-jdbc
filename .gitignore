@@ -33,3 +33,6 @@ nbdist/
 
 # Eclipse
 .settings/
+
+# Credenciais locais do banco (NUNCA commitar) - use db.properties.example como base
+db.properties

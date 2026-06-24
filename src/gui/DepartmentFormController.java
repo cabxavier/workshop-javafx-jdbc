@@ -77,7 +77,7 @@ public class DepartmentFormController implements Initializable {
 			Utils.currentStage(event).close();
 
 		} catch (ValidationException e) {
-			setErrorMessages(e.getErros());
+			setErrorMessages(e.getErrors());
 		} catch (DbException e) {
 			Alerts.showAlert("Erro save object", null, e.getMessage(), AlertType.ERROR);
 		}
@@ -103,7 +103,7 @@ public class DepartmentFormController implements Initializable {
 
 		obj.setName(txtName.getText());
 
-		if (exception.getErros().size() > 0) {
+		if (exception.getErrors().size() > 0) {
 			throw exception;
 		}
 
